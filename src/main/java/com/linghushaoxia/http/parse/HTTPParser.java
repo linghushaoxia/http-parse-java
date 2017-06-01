@@ -156,7 +156,8 @@ public class  HTTPParser {
           return req_host;
         }
 
-      /* FALLTHROUGH */
+	break;
+    /* FALLTHROUGH */
       case req_host_v6_end:
         switch (ch) {
           case ':':
@@ -173,7 +174,8 @@ public class  HTTPParser {
           return req_host_v6_end;
         }
 
-      /* FALLTHROUGH */
+	break;
+    /* FALLTHROUGH */
       case req_host_v6_start:
         if (isHex(ch) || ch == ':') {
           return req_host_v6;
@@ -188,7 +190,8 @@ public class  HTTPParser {
             return req_query_string_start;
         }
 
-      /* FALLTHROUGH */
+	break;
+    /* FALLTHROUGH */
       case req_port_start:
         if (isDigit(ch)) {
           return req_port;
