@@ -1936,7 +1936,10 @@ return error(settings, "unhandled state", data);
         ,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
         ,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
     };
-
+    /**
+     * url中合法的字符
+     * 
+     */
     static final boolean [] normal_url_char = {
 /*   0 nul    1 soh    2 stx    3 etx    4 eot    5 enq    6 ack    7 bel  */
     false,   false,   false,   false,   false,   false,   false,   false,
@@ -1994,7 +1997,9 @@ return error(settings, "unhandled state", data);
      true,    true,    true,    true,    true,    true,    true,    true,
 
     };
-
+    /**
+     * 可见字符
+     */
     public static final byte A = 0x41;
     public static final byte B = 0x42;
     public static final byte C = 0x43;
@@ -2021,19 +2026,75 @@ return error(settings, "unhandled state", data);
     public static final byte X = 0x58;
     public static final byte Y = 0x59;
     public static final byte Z = 0x5a;
+    /**
+     * 下横线
+     * Low Line
+     */
     public static final byte UNDER = 0x5f;
+    /**
+     * 回车(CR)
+     * Carriage Return
+     */
     public static final byte CR = 0x0d;
+    /**
+     * 换行(LF)
+     * New Line (Nl)
+     */
     public static final byte LF = 0x0a;
+    /**
+     * 句号
+     * Full Stop
+     */
     public static final byte DOT = 0x2e;
+    /**
+     * 空格
+     * Space
+     */
     public static final byte SPACE = 0x20;
+    /**
+     * 制表符
+     * tabulator
+     */
     public static final byte TAB = 0x09;
+    /**
+     * 分号
+     * Semicolon
+     */
     public static final byte SEMI = 0x3b;
+    /**
+     * 冒号
+     * Colon
+     */
     public static final byte COLON = 0x3a;
+    /**
+     * 数字标记
+     * Number Sign
+     */
     public static final byte HASH = 0x23;
+    /**
+     * 问号
+     * Question Mark
+     */
     public static final byte QMARK = 0x3f;
+    /**
+     * 斜线号
+     * Solidus
+     */
     public static final byte SLASH = 0x2f;
+    /**
+     * 连字符 - 负号
+     * Hyphen-Minus
+     */
     public static final byte DASH = 0x2d;
+    /**
+     * 星号
+     * Asterisk
+     */
     public static final byte STAR = 0x2a;
+    /**
+     * 空
+     * Null
+     */
     public static final byte NULL = 0x00;
   }
 
