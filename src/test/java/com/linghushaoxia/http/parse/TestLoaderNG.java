@@ -21,14 +21,10 @@ package com.linghushaoxia.http.parse;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.StringReader;
-import java.io.Reader;
-import java.io.IOException;
-
 import java.util.*;
 import java.util.regex.*;
-
-import java.nio.ByteBuffer;
-
+import com.linghushaoxia.http.parse.impl.HTTPMethodSelector;
+import com.linghushaoxia.http.parse.impl.ParserTypeSelector;
 
 public class TestLoaderNG {
   String fn;
@@ -80,8 +76,8 @@ public class TestLoaderNG {
           String  value = r.group(2).trim();
                if ("name".equals(key))         {curr.name = value;}
           else if ("raw".equals(key))          {curr.raw = toByteArray(value);} //!
-          else if ("type".equals(key))         {curr.type = ParserType.parse(value);}
-          else if ("method".equals(key))       {curr.method = HTTPMethod.parse(value);}
+          else if ("type".equals(key))         {curr.type = ParserTypeSelector.parse(value);}
+          else if ("method".equals(key))       {curr.method =HTTPMethodSelector.parse(value);}
           else if ("status_code".equals(key))  {curr.status_code = Integer.parseInt(value);}
           else if ("request_path".equals(key)) {curr.request_path = value;}
           else if ("request_url".equals(key))  {curr.request_url = value;}

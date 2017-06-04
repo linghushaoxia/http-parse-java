@@ -7,7 +7,7 @@ public class ParseUrl {
     HTTPParserUrl u = new HTTPParserUrl();
     HTTPParser p = new HTTPParser();
     Url test = Url.URL_TESTS[i];
-//    System.out.println(":: " + test.name);
+    System.out.println(":: " + test.name);
     int rv = p.parse_url(Util.buffer(test.url),test.is_connect,u);
     UnitTest.check_equals(rv, test.rv);
     if(test.rv == 0){

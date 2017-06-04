@@ -208,8 +208,8 @@ public class Util {
     }
     return null;
   }
-  static void error(){
-	  
+  static Object error(String string,ByteBuffer buffer, int len){
+	  return null;
   }
 
   static class Settings extends ParserSettings {

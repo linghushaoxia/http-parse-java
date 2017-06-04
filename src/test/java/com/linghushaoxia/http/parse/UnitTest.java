@@ -2,6 +2,8 @@ package com.linghushaoxia.http.parse;
 
 import java.nio.ByteBuffer;
 
+import com.linghushaoxia.http.parse.impl.HTTPException;
+
 
 public class UnitTest {
 
